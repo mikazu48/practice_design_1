@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_design_1/screens/forgot_screen.dart';
 import 'package:practice_design_1/screens/home_screen.dart';
 import 'package:practice_design_1/screens/signup_screen.dart';
 
@@ -36,6 +37,35 @@ class LoginScreen extends StatelessWidget {
                         border: OutlineInputBorder(),
                         prefixIcon: Icon(Icons.lock),
                         suffixIcon: Icon(Icons.remove_red_eye),
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SignupScreen(),
+                              ));
+                        },
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ForgotScreen(),
+                                ));
+                          },
+                          child: Text(
+                            "Lupa Password",
+                            style: TextStyle(
+                                color: Color(0xFFEF6969),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
                       ),
                     ),
                     SizedBox(height: 20),
